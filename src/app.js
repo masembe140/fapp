@@ -6,7 +6,7 @@ const apphooks =require('./app.hooks')
 
 app.configure(services)
 
-
+app.use(express.notFound());
 
 
 
