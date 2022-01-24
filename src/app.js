@@ -1,6 +1,10 @@
 const express = require('@feathersjs/express');
 const feathers = require('@feathersjs/feathers');
 const app = express(feathers());
+const services = require('./services')
+const apphooks =require('./app.hooks')
+
+app.configure(services)
 
 
 
@@ -10,5 +14,5 @@ const app = express(feathers());
 
 
 
-
+app.hooks(apphooks)
 module.exports = app
